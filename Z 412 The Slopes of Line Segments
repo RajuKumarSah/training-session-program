@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    float a,b,c,d;
+    float a1,b1,c1,d1;
+    scanf("%f%f%f%f\n%f%f%f%f",&a,&b,&c,&d,&a1,&b1,&c1,&d1);
+    float t,l;
+    t=((c-a)/(d-b));
+    l=((c1-a1)/(d1-b1));
+    if(t==l)
+    {
+        printf("yes\n");
+    }
+    else
+    {
+        printf("no\n");
+    }
+    return 0;
+}
