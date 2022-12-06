@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    long long int n;
+    scanf("%lld",&n);
+    long long int sum=1,k=2,l=2;
+    for(int i=2;i<=n;i++)
+    {
+        sum=sum+k;
+        k=k+l;
+        l=l+1;
+    }
+    printf("%lld",sum);
+    
+    return 0;
+}
