@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+   
+   long long int a,b,c;
+    scanf("%lld%lld%lld",&a,&b,&c);
+    long long int t=a%c==0?a/c:a/c+1;
+    long long int l=b%c==0?b/c:b/c+1;
+    printf("%lld",t*l);  
+    return 0;
+}
