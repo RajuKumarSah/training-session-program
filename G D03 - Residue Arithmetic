@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int a,b;
+    scanf("%d%d",&a,&b);
+    int a1,a2,b1,b2,c1,c2;
+    scanf("%d%d\n",&a1,&a2);
+    scanf("%d%d\n",&b1,&b2);
+    scanf("%d%d\n",&c1,&c2);
+    while(a1!=a2)
+    {
+        if(a1<=a2)
+        {
+            a1=a1+a;
+        }
+        else{
+            a2=a2+b;
+        }
+    }
+    int k=a1;
+    while(b1!=b2)
+    {
+        if(b1<b2)
+        {
+            b1=b1+a;
+        }
+        else
+        {
+            b2=b2+b;
+        }
+    }
+    int l=b1;
+    while(c1!=c2)
+    {
+        if(c1<c2)
+        {
+            c1=c1+a;
+        }
+        else
+        {
+            c2=c2+b;
+        }
+    }
+    int c=c1;
+    int r;
+    r=2*k+l-c;
+    printf("%d",r);
+    return 0;
+}
+    
