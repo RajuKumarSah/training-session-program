@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    scanf("%d",&n);
+    while(n--)
+    {
+        int F,B,T,D,ktm=0;
+        scanf("%d%d%d%d",&F,&B,&T,&D);
+        while(B<D)
+        {
+            ktm=ktm+B+F;
+            D=D-(B-F);
+        }
+        ktm=ktm+D;
+        printf("%d\n",ktm*T);
+    }
+    return 0;
+}
