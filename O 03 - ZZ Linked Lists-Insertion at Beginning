@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+  
+
+void addFirst(struct node **head, int val)
+{
+      //create a new node
+      struct node *newNode = malloc(sizeof(struct node));
+      newNode->data = val;
+
+      newNode->next = *head;
+
+      *head = newNode;
+}
+
+void printList(struct node *head)
+{
+    struct node *temp = head;
+
+    //iterate the entire linked list and print the data
+    while(temp!=NULL)
+    {
+         printf("%d", temp->data);
+         temp = temp->next;
+        if(temp!=NULL)
+        {
+            printf("->");
+        }
+    }
+}
+
+int main()
+{
+     struct node *head = NULL;
+    int n;
+    scanf("%d",&n);
+    while(n--)
+    {
+        int t;
+        scanf("%d",&t);
+      addFirst(&head,t);
+    }
+      printList(head);
+
+     return 0;
+}
