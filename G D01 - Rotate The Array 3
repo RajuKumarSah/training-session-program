@@ -1,0 +1,16 @@
+def RightRotate(a, n, k):
+    k = k % n;
+    for i in range(0, n):
+        if(i < k):
+            print(a[n + i - k], end = " ");
+ 
+        else:
+            print(a[i - k], end = " ");
+ 
+    print("\n");
+N=int(input())
+Array = list(map(int,input().split()))
+K=int(input())
+     
+RightRotate(Array, N, K);
+ 
