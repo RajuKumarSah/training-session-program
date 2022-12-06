@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    scanf("%d",&n);
+    int a[n],i,j;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int in=1;
+    while(in<n && a[in]>a[in-1])
+        in++;
+    while(in<n && a[in]==a[in-1])
+        in++;
+    while(in<n && a[in]<a[in-1])
+        in++;
+    in!=n?printf("no"): printf("yes");
+
+return 0;
+}
