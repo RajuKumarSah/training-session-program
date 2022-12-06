@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int n;
+    long int sum=0;
+    scanf("%d",&n);
+    int day[n],cost[n],i;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d %d",&day[i],&cost[i]);
+    }
+    for(i=0;i<n-1;i++)
+    {
+        if(cost[i]<cost[i+1])
+        {
+            cost[i+1]=cost[i];
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        sum+=day[i]*cost[i];
+    }
+    printf("%ld",sum);
+    
+    
+    return 0;
+}
