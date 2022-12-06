@@ -1,0 +1,16 @@
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    int side1; 
+    scanf("%d", &side1);
+    int side2; 
+    scanf("%d", &side2);
+    printf("%d",side1*side2);
+    return 0;
+}
