@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int plin(int n)
+{
+    int temp=n,rem=0,sum=0;
+    while(n!=0)
+    {
+        rem = n%10;
+        sum = sum*10+rem;
+        n=n/10;
+    }
+    if(sum==temp)
+        return 1;
+    else
+        return 0;
+}
+int rev(int n)
+{
+  int rem=0,sum=0;
+  while(n!=0)
+    {
+      rem = n%10;
+      sum= sum*10+rem;
+      n=n/10;
+    }
+    return sum;
+}
+int main() { 
+    int n,f=0;
+    scanf("%d",&n);
+    int i=0;
+    while(i<5)
+    {
+        n=n+rev(n);
+        if(plin(n)==1)
+        {
+            printf("%d\nYES",n);
+            f=1;
+            break;
+        }
+        i++;
+    }
+    if(f==0)
+    printf("NO");
+    return 0;
+}
