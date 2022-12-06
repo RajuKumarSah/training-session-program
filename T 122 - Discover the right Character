@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+ int n;
+    scanf("%d",&n);
+    char str[32];
+    int re,i=0;
+    while(n>0)
+    {
+        re=(n-1)%26;
+        str[i++]='A'+re;
+        n=(n-1)/26;
+    }
+    while(--i>=0)
+    {
+        printf("%c",str[i]);
+    }
+    return 0;
+}
