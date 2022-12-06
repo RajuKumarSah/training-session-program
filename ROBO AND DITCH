@@ -1,0 +1,22 @@
+a,b,c,d,e= map(int,input().split(" "))
+d=-d
+if(a==b):
+    if(a>=c):
+        print(c*st)
+    else:
+        print("NO")
+else:
+    p,t=0,0
+    while(1):
+        if(p+a>=c):
+            print('F',(t+c-p)*e)
+            break
+        else:
+            p=p+a
+            t=t+a
+        if(p-b<=d):
+            print('B',(t-d+p)*e)
+            break
+        else:
+            p=p-b
+            t=t+b
