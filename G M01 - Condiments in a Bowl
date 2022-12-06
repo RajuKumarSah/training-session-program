@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+
+    int a,b;
+    scanf("%d%d",&a,&b);
+    int c[b],i;
+    for(i=0;i<b;i++)
+    {
+        scanf("%d",&c[i]);
+    }
+    int k,count=0;
+    k=a;
+    for(i=0;i<b-1;i++)
+    {
+        k=k-c[i];
+        if(k<5)
+        {
+            count=count+(a-k);
+            k=a;
+        }
+    }
+    printf("%d",count);
+    
+    return 0;
+}
