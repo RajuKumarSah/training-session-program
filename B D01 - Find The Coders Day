@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+        int n,l=0;
+    scanf("%d",&n);
+    if(n%4==0)
+        l=1;
+    if(n>1918){
+    if(n%100==0)
+        l=0;
+    if(n%400==0)
+        l=1;
+    }
+    if(n!=1918)
+        l==0?printf("13.09.%d\n",n):printf("12.09.%d\n",n);
+    else
+        printf("26.09.%d\n",n);
+    return 0;
+}
